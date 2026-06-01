@@ -8,7 +8,7 @@ SOC 설계 과정에서 발생하는 Power / Performance / Area (PPA) 수치를 
 <br/>
 
 ## 1. 기업명
-잇다반도체
+[**잇다반도체**](https://itdasemi.com/)
 
 <br/>
 
