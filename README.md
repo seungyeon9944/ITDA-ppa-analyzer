@@ -18,10 +18,42 @@ SOC 설계 과정에서 발생하는 Power / Performance / Area (PPA) 수치를 
 | 배포 수준 | 실서비스 수준 (Power·Performance·Area 세 파트 통합) |
 
 
-## 3. 담당 역할
+## 3. 팀원 정보 및 역할 분담
+SSAFY 14기 서울 5반(기업연계1반) S101조
+
+| 이름 | 역할 | 담당 |
+|---|---|---|
+| 김건희 | Power | Power 기능의 Frontend 및 Backend
+| 손준호 | 팀장, Performance | Performance 기능의 Frontend 및 Backend
+| 강경은 | Performance, Infra | Performance 기능의 Frontend 및 Backend, Jenkins를 이용한 CI/CD 설계
+| 이승연 | Area | Area 기능의 Frontend 및 Backend
+| 이진선 | Area | Area 기능의 Frontend 및 Backend
 
 
 ## 4. 주요 기능 및 화면
+### ⚡ Power 기능
+![Power 시나리오 편집](images/power1.png)
+
+![Power 시점별 전력 계산](images/power2.png)
+
+![Power 결과 시각화](images/power3.png)
+
+<br/>
+
+### 🧵 Performance 기능
+![Perf 토폴로지 설계](images/perf1.png)
+
+![Perf 대규모 시뮬레이션](images/perf2.png)
+
+![Perf 병목 검출](images/perf3.png)
+
+<br/>
+
+### 🧩 Area 기능
+![Area IP 배치 면적 계산](images/area1.png)
+
+![Area 실시간 협업](images/area2.png)
+
 
 
 ## 5. 시스템 아키텍처
@@ -80,7 +112,7 @@ SOC 설계 과정에서 발생하는 Power / Performance / Area (PPA) 수치를 
 - **CI/CD**: GitLab push를 트리거로 **Jenkins**에서 빌드·배포 후, **Nginx**가 정적 파일을 서빙하면서 `/api` 요청을 FastAPI로 프록시한다.
 - **Nginx**: `/` 경로로 Vue SPA를 서빙하고, `/api` 경로로 FastAPI 리버스 프록시를 연결하며, CORS 헤더를 설정한다.
 
-## 4. 개발 가이드
+## 6. 개발 가이드
 ### 환경 설정
 ```
 cd FE
@@ -97,5 +129,3 @@ npm install
 cd FE
 npm run serve
 ```
-
-## 5. 
