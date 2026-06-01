@@ -5,8 +5,12 @@
 
 SOC 설계 과정에서 발생하는 Power / Performance / Area (PPA) 수치를 통합적으로 분석·비교·시각화하는 웹 대시보드를 개발한다.
 
+<br/>
+
 ## 1. 기업명
 잇다반도체
+
+<br/>
 
 ## 2. 목표
 설계자가 수작업·스크립트·엑셀로 분산 수행하던 **PPA 분석**을 **자동화**하고, 설계 변경이 **PPA 수치에 주는 영향을 한 화면에서 비교**할 수 있도록 한다.
@@ -17,6 +21,7 @@ SOC 설계 과정에서 발생하는 Power / Performance / Area (PPA) 수치를 
 | 산출물 | PPA 분석기 사이트 / 개발·테스트 코드 / 사용자 매뉴얼 |
 | 배포 수준 | 실서비스 수준 (Power·Performance·Area 세 파트 통합) |
 
+<br/>
 
 ## 3. 팀원 정보 및 역할 분담
 SSAFY 14기 서울 5반(기업연계1반) S101조
@@ -29,6 +34,7 @@ SSAFY 14기 서울 5반(기업연계1반) S101조
 | 이승연 | Area | Area 기능의 Frontend 및 Backend
 | 이진선 | Area | Area 기능의 Frontend 및 Backend
 
+<br/>
 
 ## 4. 주요 기능 및 화면
 ### ⚡ Power 기능
@@ -54,7 +60,7 @@ SSAFY 14기 서울 5반(기업연계1반) S101조
 
 ![Area 실시간 협업](images/area2.png)
 
-
+<br/>
 
 ## 5. 시스템 아키텍처
 ### 프론트엔드 
@@ -111,6 +117,8 @@ SSAFY 14기 서울 5반(기업연계1반) S101조
 
 - **CI/CD**: GitLab push를 트리거로 **Jenkins**에서 빌드·배포 후, **Nginx**가 정적 파일을 서빙하면서 `/api` 요청을 FastAPI로 프록시한다.
 - **Nginx**: `/` 경로로 Vue SPA를 서빙하고, `/api` 경로로 FastAPI 리버스 프록시를 연결하며, CORS 헤더를 설정한다.
+
+<br/>
 
 ## 6. 개발 가이드
 ### 환경 설정
